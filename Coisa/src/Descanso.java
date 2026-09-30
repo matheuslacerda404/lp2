@@ -15,10 +15,10 @@ public class Descanso {
     }
 
     public String getStatusGeral() {
-        if (horasDeDescanso/numerosDeSemanas >= 26) {
-            return "Você está descansando bem!";
+        if (horasDeDescanso/numerosDeSemanas <= 26 || numerosDeSemanas == 0 || horasDeDescanso == 0) {
+            return "cansado";
         } else {
-            return "Você precisa descansar mais!";
+            return "descansado";
         }
     }
 }
