@@ -39,7 +39,8 @@ public class RegistroResumos {
 
     public String imprimeResumos(){
         StringBuilder sb = new StringBuilder();
-        sb.append(quantidade).append(" resumo(s) cadastrado(s)\n");
+        sb.append("- ").append(quantidade).append(" resumo(s) cadastrado(s)\n");
+        sb.append("- ");
         for (int i = 0; i < quantidade; i++) {
             sb.append(temas[i]);
             if (i < quantidade - 1) {
