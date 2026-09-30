@@ -39,7 +39,7 @@ public class Disciplina {
 
     @Override
     public String toString() {
-        return this.nomeDisciplina + ", " + this.horasDeEstudo + ", "
-                + calculaMedia() + ", " + Arrays.toString(this.notas);
+        return this.nomeDisciplina + " " + this.horasDeEstudo + " "
+                + calculaMedia() + " " + Arrays.toString(this.notas);
     }
 }
