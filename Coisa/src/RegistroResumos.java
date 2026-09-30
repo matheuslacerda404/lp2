@@ -1,7 +1,7 @@
 public class RegistroResumos {
 
-    private String[] temas;
-    private String[] conteudos;
+    private final String[] temas;
+    private final String[] conteudos;
     private int quantidade;
     private int proximaPosicao;
 
@@ -12,7 +12,7 @@ public class RegistroResumos {
         this.proximaPosicao = 0;
     }
 
-    public void adicionaResumo(String tema, String conteudo){
+    public void adiciona(String tema, String conteudo){
         for(int i = 0; i < quantidade; i++) {
             if (temas[i].equals(tema)) {
                 conteudos[i] = conteudo;
@@ -22,16 +22,16 @@ public class RegistroResumos {
 
         temas[proximaPosicao] = tema;
         conteudos[proximaPosicao] = conteudo;
-        proximaPosicao = (proximaPosicao + 1) % temas.lenght;
+        proximaPosicao = (proximaPosicao + 1) % temas.length;
 
-        if (quantidade < temas.lenght) {
+        if (quantidade < temas.length) {
             quantidade++;
         }
     }
 
     public String[] pegaResumos() {
         String[] resumos = new String[quantidade];
-        for (int = i; i < quantidade; i++) {
+        for (int i = 0; i < quantidade; i++) {
             resumos[i] = temas[i] + ": " + conteudos[i];
         }
         return resumos;
@@ -49,7 +49,15 @@ public class RegistroResumos {
         return sb.toString();
     }
     
-    public int contaResumos(){
+    public boolean temResumo(String tema) {
+        for (int i = 0; i < quantidade; i++) {
+            if (temas[i].equals(tema)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public int conta(){
         return quantidade;
     }
 }

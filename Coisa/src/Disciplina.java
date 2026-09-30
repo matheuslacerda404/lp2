@@ -1,10 +1,11 @@
+import java.util.Arrays;
 public class Disciplina {
     private static final int QTD_NOTAS = 4;
     private static final double MEDIA_FINAL = 7.0;
 
-    private String nomeDisciplina;
+    private final String nomeDisciplina;
     private int horasDeEstudo;
-    private double[] notas;
+    private final double[] notas;
 
     public Disciplina(String nomeDisciplina) {
         this.nomeDisciplina = nomeDisciplina;
@@ -38,7 +39,7 @@ public class Disciplina {
 
     @Override
     public String toString() {
-        return this.nomeDisciplina + ", " + this.horasEstudo + ", "
+        return this.nomeDisciplina + ", " + this.horasDeEstudo + ", "
                 + calculaMedia() + ", " + Arrays.toString(this.notas);
     }
 }

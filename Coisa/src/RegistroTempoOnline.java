@@ -1,7 +1,7 @@
 public class RegistroTempoOnline {
-     private String nomeDisciplina;
+    private final String nomeDisciplina;
     private int tempoOnlineUsado;
-    private int tempoOnlineEsperado;
+    private final int tempoOnlineEsperado;
 
     public RegistroTempoOnline(String nomeDisciplina) {
         this.nomeDisciplina = nomeDisciplina;

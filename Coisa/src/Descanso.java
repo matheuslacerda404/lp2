@@ -1,9 +1,9 @@
 public class Descanso {
     private int horasDeDescanso;
     private int numerosDeSemanas;
-    public Descanso(int horasDeDescanso, int numerosDeSemanas) {
-        this.horasDeDescanso = horasDeDescanso;
-        this.numerosDeSemanas = numerosDeSemanas;
+    public Descanso() {
+        this.horasDeDescanso = 0;
+        this.numerosDeSemanas = 0;
     }
 
     public void defineHorasDescanso(int horasDeDescanso) {
