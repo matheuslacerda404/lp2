@@ -1,3 +1,5 @@
+package lab2;
+
 public class Descanso {
     private int horasDeDescanso;
     private int numerosDeSemanas;

@@ -1,3 +1,5 @@
+package lab2;
+
 public class Coisa {
     public static void main(String[] args) {
         registrarDescanso();

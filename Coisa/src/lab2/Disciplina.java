@@ -1,3 +1,5 @@
+package lab2;
+
 import java.util.Arrays;
 public class Disciplina {
     private static final int QTD_NOTAS = 4;

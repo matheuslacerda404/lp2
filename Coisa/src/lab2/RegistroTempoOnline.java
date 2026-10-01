@@ -1,3 +1,5 @@
+package lab2;
+
 public class RegistroTempoOnline {
     private final String nomeDisciplina;
     private int tempoOnlineUsado;

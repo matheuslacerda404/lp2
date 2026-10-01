@@ -1,3 +1,5 @@
+package lab2;
+
 public class RegistroResumos {
 
     private final String[] temas;
