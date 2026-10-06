@@ -1,3 +1,5 @@
+//Comentário Inicial: Muito bom o código, não tenho muito a acrescentar, comentários apenas pelo pedido da questão
+
 package lab2;
 
 public class RegistroResumos {

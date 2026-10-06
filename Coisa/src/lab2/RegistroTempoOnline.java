@@ -1,3 +1,5 @@
+//Comentário Inicial: Muito bom o código, não tenho muito a acrescentar, comentários apenas pelo pedido da questão
+
 package lab2;
 
 public class RegistroTempoOnline {
@@ -5,13 +7,13 @@ public class RegistroTempoOnline {
     private int tempoOnlineUsado;
     private final int tempoOnlineEsperado;
 
-    public RegistroTempoOnline(String nomeDisciplina) {
+    public RegistroTempoOnline(String nomeDisciplina) { // Construtor de 3 variaveis, recebendo um argumento e retornando 2 outros 2 com pedido no comando
         this.nomeDisciplina = nomeDisciplina;
         this.tempoOnlineUsado = 0;
         this.tempoOnlineEsperado = 120;
     }
 
-    public RegistroTempoOnline(String nomeDisciplina, int tempoOnlineEsperado) {
+    public RegistroTempoOnline(String nomeDisciplina, int tempoOnlineEsperado) { // Contrutor de 3 variaveis,agora recebendo 2 argumentos, também como pedido no comando
         this.nomeDisciplina = nomeDisciplina;
         this.tempoOnlineUsado = 0;
         this.tempoOnlineEsperado = tempoOnlineEsperado;

@@ -1,3 +1,5 @@
+//Comentário Inicial: Muito bom o código, não tenho muito a acrescentar, comentários apenas pelo pedido da questão
+
 package lab2;
 
 import java.util.Arrays;
@@ -21,9 +23,9 @@ public class Disciplina {
 
     public void cadastraNota(int nota, double valorNota) {
         if(nota < 1 || nota > QTD_NOTAS) {
-             throw new IllegalArgumentException("Nota inválida: use 1, 2, 3 ou 4.");
+             throw new IllegalArgumentException("Nota inválida: use 1, 2, 3 ou 4."); // Retorno para caso de entrada inválida
         }
-        this.notas[nota - 1] = valorNota;
+        this.notas[nota - 1] = valorNota; // Atribui uma nota ao Array notas
     }
 
     public boolean aprovado() {
