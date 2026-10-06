@@ -16,6 +16,19 @@ public class RegistroResumos {
         this.proximaPosicao = 0;
     }
 
+    public class Resumo {
+        private String tema;
+        private String conteudo;
+
+        public Resumo(String tema, String conteudo) {
+            this.tema = tema;
+            this.conteudo = conteudo;
+        }
+
+        public String getTema {
+
+        }
+    }
     public void adiciona(String tema, String conteudo){
         for(int i = 0; i < quantidade; i++) {
             if (temas[i].equals(tema)) {
