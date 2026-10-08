@@ -1,7 +1,8 @@
-//Comentário Inicial: Muito bom o código, não tenho muito a acrescentar, comentários apenas pelo pedido da questão
-
 package lab2;
 
+/**
+ * @author Matheus Sampaio Lacerda de Almeida
+ */
 public class RegistroTempoOnline {
     private final String nomeDisciplina;
     private int tempoOnlineUsado;

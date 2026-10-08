@@ -1,20 +1,13 @@
-//Comentário Inicial: Muito bom o código, não tenho muito a acrescentar, comentários apenas pelo pedido da questão
-
 package lab2;
 
-public class RegistroResumos {
 
-    private final String[] temas;
-    private final String[] conteudos;
+/** Armazena e gerencia resumos de temas e conteudos variados.
+ * @author Matheus Sampaio Lacerda de Almeida
+ */
+public class RegistroResumos {
+    private Resumo[] resumos;
     private int quantidade;
     private int proximaPosicao;
-
-    public RegistroResumos(int numeroDeResumos){
-        this.temas = new String[numeroDeResumos];
-        this.conteudos = new String[numeroDeResumos];
-        this.quantidade = 0;
-        this.proximaPosicao = 0;
-    }
 
     public class Resumo {
         private String tema;
@@ -25,51 +18,62 @@ public class RegistroResumos {
             this.conteudo = conteudo;
         }
 
-        public String getTema {
+        public String getTema(){
+            return this.tema;
+        }
+        public String getConteudo(){
+            return conteudo;
+        }
 
+        public String toString(){
+            return this.tema + ": " + this.conteudo;
         }
     }
+
+    public RegistroResumos(int numeroDeResumos){
+        this.resumos = new Resumo[numeroDeResumos];
+        this.quantidade = 0;
+        this.proximaPosicao = 0;
+    }
+
     public void adiciona(String tema, String conteudo){
-        for(int i = 0; i < quantidade; i++) {
-            if (temas[i].equals(tema)) {
-                conteudos[i] = conteudo;
+        for(Resumo t: this.resumos) {
+            if (t != null && t.getTema().equals(tema)) {
                 return;
             }
         }
 
-        temas[proximaPosicao] = tema;
-        conteudos[proximaPosicao] = conteudo;
-        proximaPosicao = (proximaPosicao + 1) % temas.length;
+        resumos[proximaPosicao] = new Resumo(tema, conteudo);
+        proximaPosicao = (proximaPosicao + 1) % resumos.length;
 
-        if (quantidade < temas.length) {
+        if (quantidade < resumos.length) {
             quantidade++;
         }
     }
 
     public String[] pegaResumos() {
-        String[] resumos = new String[quantidade];
+        String[] resultado = new String[quantidade];
+
         for (int i = 0; i < quantidade; i++) {
-            resumos[i] = temas[i] + ": " + conteudos[i];
+            resultado[i] = resumos[i].toString();
         }
-        return resumos;
+
+        return resultado;
     }
 
     public String imprimeResumos(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("- ").append(quantidade).append(" resumo(s) cadastrado(s)\n");
-        sb.append("- ");
-        for (int i = 0; i < quantidade; i++) {
-            sb.append(temas[i]);
-            if (i < quantidade - 1) {
-                sb.append(" | ");
-            }
+        String imprimeresumo = "";
+        for (int i = 0; i < quantidade - 1; i++) {
+            imprimeresumo += resumos[i].getTema() + " | ";
         }
-        return sb.toString();
+        imprimeresumo += resumos[quantidade-1].getTema();
+        return "- "+quantidade + " resumo(s) cadastrado(s)"+ "\n" +
+                "- " + imprimeresumo;
     }
     
     public boolean temResumo(String tema) {
-        for (int i = 0; i < quantidade; i++) {
-            if (temas[i].equals(tema)) {
+        for (Resumo t : this.resumos) {
+            if (t != null && t.getTema().equals(tema)) {
                 return true;
             }
         }
@@ -77,5 +81,9 @@ public class RegistroResumos {
     }
     public int conta(){
         return quantidade;
+    }
+
+    public String[] busca(String chaveDeBusca){
+
     }
 }

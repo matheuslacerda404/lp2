@@ -1,9 +1,8 @@
-//Comentário Inicial: Muito bom o código, não tenho muito a acrescentar, comentários apenas pelo pedido da questão
-
 package lab2;
 
 /** Classe criada para identificar se um aluno está descansado ou não, com base na pré-definição de que um
- * aluno só esta descansado se tiver 26 horas de descanso semanais
+ * aluno só esta descansado se tiver 26 horas de descanso semanais.
+ * @author Matheus Sampaio Lacerda de Almeida
  */
 
 public class Descanso {
