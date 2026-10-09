@@ -58,6 +58,7 @@ public class RegistroResumos {
          *
          * @return a representação em String de um resumo.
          */
+        @Override
         public String toString(){
             return this.tema + ": " + this.conteudo;
         }
