@@ -28,11 +28,11 @@ public class Disciplina {
 
     /**
      * Constrói uma disciplina com um número específico de notas. Com todas as notas tendo o mesmo peso.
-     * @param nome o nome da disciplina.
+     * @param nomeDisciplina o nome da disciplina.
      * @param numeroNotas a quantidade de notas da disciplina.
      */
-    public Disciplina(String nome, int numeroNotas) {
-        this.nomeDisciplina = nome;
+    public Disciplina(String nomeDisciplina, int numeroNotas) {
+        this.nomeDisciplina = nomeDisciplina;
         this.notas = new double[numeroNotas];
         this.pesos = null;
     }
@@ -46,7 +46,7 @@ public class Disciplina {
      * cada uma delas. Se o array de pesos não for passado, todas as notas terão o
      * mesmo peso.
      *
-     * @param nome        o nome da disciplina.
+     * @param nomeDisciplina        o nome da disciplina.
      * @param numeroNotas a quantidade de notas da disciplina.
      * @param pesos       os pesos de cada nota (mesmo tamanho que
      *                    numeroNotas), ou null para pesos iguais.

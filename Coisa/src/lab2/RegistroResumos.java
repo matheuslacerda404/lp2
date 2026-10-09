@@ -83,7 +83,7 @@ public class RegistroResumos {
      * @param tema     o tema do resumo
      * @param conteudo o conteúdo do resumo
      */
-    public void adiciona(String tema, String conteudo){
+    public void adicionaResumo(String tema, String conteudo){
         for(Resumo t: this.resumos) {
             if (t != null && t.getTema().equals(tema)) {
                 return;
@@ -152,7 +152,7 @@ public class RegistroResumos {
      *
      * @return a quantidade de resumos cadastrados.
      */
-    public int conta(){
+    public int contaResumos(){
         return quantidade;
     }
 
