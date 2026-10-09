@@ -77,8 +77,9 @@ public class Disciplina {
         int somaPesos = 0;
  
         for (int i = 0; i < this.notas.length; i++) {
-            soma += this.notas[i] * this.pesos[i];
-            somaPesos += this.pesos[i];
+            int peso = (this.pesos != null) ? this.pesos[i] : 1;
+            soma += this.notas[i] * peso;
+            somaPesos += peso;
         }
  
         return soma / somaPesos;
