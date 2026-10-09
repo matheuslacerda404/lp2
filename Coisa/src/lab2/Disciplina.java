@@ -1,7 +1,8 @@
 package lab2;
 
 import java.util.Arrays;
-/** Classe criada para implementar uma disciplina, cada disciplina tem um nome, as horas de estudo atribuidas a ela,
+/** 
+ * Classe criada para implementar uma disciplina, cada disciplina tem um nome, as horas de estudo atribuidas a ela,
  * as notas que o aluno tirou nas provas dessa disciplina e a media final dela.
  * @author Matheus Sampaio Lacerda de Almeida
  */
@@ -9,11 +10,16 @@ public class Disciplina {
     private static final int QTD_NOTAS = 4;
     private static final double MEDIA_FINAL = 7.0;
 
-    private final String nomeDisciplina;
-    private int horasDeEstudo;
-    private final double[] notas;
+    private final String nomeDisciplina; // nome da disciplina que será implementada.
+    private int horasDeEstudo; // horas que o estudante estudou determinada disciplina, começando sempre igual a 0.
+    private final double[] notas; // array que armazena as notas tiradas pelo aluno nas 4 provas da disciplina.
 
-    public Disciplina(String nomeDisciplina) { //construtor do objeto disciplina, que determina 3 variaveis.
+    /** Construtor do objeto disciplina, que determina 3 variaveis.
+    * @param nomeDisciplina o nome da disciplina, em string.
+    * @param horasDeEstudo as horas de estudo do aluno, inicialmente igual a 0.
+    * @param notas array que armazena as notas do aluno, com 4 posições.
+    */
+    public Disciplina(String nomeDisciplina) { 
         this.nomeDisciplina = nomeDisciplina;
         this.horasDeEstudo = 0;
         this.notas = new double[QTD_NOTAS];

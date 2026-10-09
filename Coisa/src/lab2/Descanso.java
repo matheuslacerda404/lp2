@@ -4,7 +4,6 @@ package lab2;
  * aluno só esta descansado se tiver 26 horas de descanso semanais.
  * @author Matheus Sampaio Lacerda de Almeida
  */
-
 public class Descanso {
     private int horasDeDescanso;
     private int numerosDeSemanas;
