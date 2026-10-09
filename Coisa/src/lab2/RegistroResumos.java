@@ -8,7 +8,7 @@ package lab2;
  */
 public class RegistroResumos {
     // atributo que armazena os resumos em um array da minha classe Resumo.
-    private Resumo[] resumos;
+    private final Resumo[] resumos;
 
     // quantidade de resumos cadastrados.
     private int quantidade;
@@ -19,10 +19,10 @@ public class RegistroResumos {
     // representação de um resumo de estudo. os resumos possuem um tema e um conteúdo.
     public class Resumo {
         // tema do resumo, usado para identificá-lo no registro.
-        private String tema;
+        private final  String tema;
 
         // conteúdo do resumo, com o texto sobre o tema.
-        private String conteudo;
+        private final String conteudo;
 
         /**
          * cria um resumo a partir de seu tema e conteúdo.
